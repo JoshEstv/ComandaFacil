@@ -1,0 +1,167 @@
+/* Reset e base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f2f4f8;
+  color: #333;
+  padding: 1rem;
+}
+
+/* Cabeçalho */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(90deg, #ff6f61, #ff9472);
+  color: white;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+header h1 {
+  font-size: 1.2rem;
+}
+
+#logout {
+  background-color: rgba(255,255,255,0.2);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Navegação */
+nav {
+  display: flex;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+nav button {
+  flex: 1;
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  padding: 0.75rem;
+  border-radius: 10px;
+  font-weight: bold;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+nav button:hover {
+  background-color: #357ab8;
+}
+
+/* Conteúdo */
+.content {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  margin-bottom: 1rem;
+}
+
+.content h2 {
+  color: #ff6f61;
+  margin-bottom: 0.5rem;
+}
+
+.content h3 {
+  color: #4a90e2;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Inputs e listas */
+input[type="text"] {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+ul {
+  list-style: none;
+}
+
+ul li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+ul li button {
+  background-color: #27ae60;
+  color: white;
+  border: none;
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* Resumo */
+#resumo {
+  margin-top: 1rem;
+}
+
+#resumo p {
+  margin-bottom: 0.5rem;
+}
+
+#resumo button {
+  background-color: #8e44ad;
+  color: white;
+  border: none;
+  padding: 0.75rem;
+  border-radius: 10px;
+  width: 100%;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Cards de pedidos */
+.pedido-card {
+  background-color: #f9f9f9;
+  padding: 1rem;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+}
+
+.pedido-card p {
+  margin-bottom: 0.5rem;
+}
+
+.pedido-card button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+  margin-right: 0.5rem;
+  cursor: pointer;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;
+  }
+
+  nav button {
+    width: 100%;
+  }
+}

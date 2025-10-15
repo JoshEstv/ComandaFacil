@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pedidos Restaurante</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Cabeçalho -->
+  <header>
+    <h1>🍽️ ComandaFacíl</h1>
+    <button id="logout">Sair</button>
+  </header>
+
+  <!-- Menu Principal -->
+  <nav>
+    <button onclick="showSection('novo')">➕ Novo Pedido</button>
+    <button onclick="showSection('andamento')">📋 Em Andamento</button>
+    <button onclick="showSection('finalizados')">✅ Finalizados</button>
+  </nav>
+
+  <!-- Seção: Novo Pedido -->
+  <section id="novo" class="content">
+    <h2>Novo Pedido</h2>
+    <label>Mesa/Cliente:</label>
+    <input type="text" placeholder="Ex: Mesa 5 " />
+
+    <h3>Cardápio</h3>
+    <ul>
+      <li>Peixe <button>+</button></li>
+      <li>Bebida <button>+</button></li>
+      <li>Batata Frita <button>+</button></li>
+    </ul>
+
+    <h3>Resumo</h3>
+    <div id="resumo">
+      <p>Itens: 0</p>
+      <p>Total: R$ 0,00</p>
+      <button>Confirmar Pedido</button>
+    </div>
+  </section>
+
+  <!-- Seção: Pedidos em Andamento -->
+  <section id="andamento" class="content" style="display:none;">
+    <h2>Pedidos em Andamento</h2>
+    <div class="pedido-card">
+      <p>Pedido #001 - Mesa 3</p>
+      <p>Status: Preparando</p>
+      <button>Atualizar Status</button>
+      <button>Finalizar</button>
+    </div>
+  </section>
+
+  <!-- Seção: Pedidos Finalizados -->
+  <section id="finalizados" class="content" style="display:none;">
+    <h2>Histórico de Pedidos</h2>
+    <ul>
+      <li>#000 - Mesa 2 - R$ 45,00</li>
+      <li>#001 - Mesa 3 - R$ 32,00</li>
+    </ul>
+  </section>
+
+  <script>
+    function showSection(id) {
+      document.querySelectorAll('.content').forEach(sec => sec.style.display = 'none');
+      document.getElementById(id).style.display = 'block';
+    }
+  </script>
+
+</body>
+</html>
